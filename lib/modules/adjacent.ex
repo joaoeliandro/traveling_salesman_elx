@@ -1,14 +1,14 @@
 defmodule TravelingSalesman.Modules.Adjacent do
   alias TravelingSalesman.Modules.Vertex
 
-  @keys [:vertex, :cost]
+  @keys [:vertex, :distance]
 
   defstruct @keys
 
-  def build(%Vertex{} = vertex, cost) do
+  def build(%Vertex{} = vertex, distance) do
     %__MODULE__{
       vertex: vertex,
-      cost: cost
+      distance: distance
     }
   end
 end
